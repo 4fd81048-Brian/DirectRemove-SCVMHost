@@ -1,7 +1,7 @@
 USE VirtualManagerDB;
  
 DECLARE @DeleteHostId GUID;
-SET @DeleteHostId = '7375441E-37CB-44B5-91B7-3B8C6C7A03FC'
+SET @DeleteHostId = 'YourHostGUID'
  
 PRINT N'Deleting host with GUID ' + RTRIM(CAST(@DeleteHostID AS nvarchar(50)))
  
