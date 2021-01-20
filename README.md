@@ -1,5 +1,5 @@
 # DirectRemove-SCVMHost
-Script to manually remove an orphaned host or cluster from VMM
+TSQL Script to manually remove an orphaned host or cluster from VMM
 
 THIS WILL DELETE DATA FROM THE VMM DATABASE
 
