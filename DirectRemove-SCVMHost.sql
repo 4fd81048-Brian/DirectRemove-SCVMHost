@@ -34,7 +34,9 @@ PRINT N'Prepairing to delete host network adapters'
 DECLARE @HostNetworkAdapterCursor CURSOR;
 DECLARE @HostNetworkAdapterID GUID;
 SET @HostNetworkAdapterCursor = CURSOR FOR
-(SELECT NetworkAdapterID FROM [dbo].[tbl_ADHC_HostNetworkAdapter])
+(SELECT NetworkAdapterID FROM [dbo].[tbl_ADHC_HostNetworkAdapter]
+WHERE HostID = @DeleteHostId
+)
  
 OPEN @HostNetworkAdapterCursor
  
@@ -95,7 +97,9 @@ PRINT N'Prepairing to delete host bus adapters'
 DECLARE @HostBusAdapterCursor CURSOR;
 DECLARE @HostBusAdapterID GUID;
 SET @HostBusAdapterCursor = CURSOR FOR
-(SELECT HbaID FROM [dbo].[tbl_ADHC_HostBusAdapter])
+(SELECT HbaID FROM [dbo].[tbl_ADHC_HostBusAdapter]
+WHERE HostID = @DeleteHostId
+)
  
 OPEN @HostBusAdapterCursor
  
