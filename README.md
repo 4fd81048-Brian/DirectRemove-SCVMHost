@@ -13,6 +13,8 @@ https://helshabini.wordpress.com/2011/11/14/manually-remove-hyper-v-host-cluster
 
 https://www.miru.ch/how-to-manually-remove-a-host-from-scvmm-2012-sp1/
 
+https://philipflint.com/2017/07/24/how-to-delete-a-host-that-is-in-pending-state-in-scvmm/
+
 To run this script
 
 1. Launch SQL Server Management Studio and select your VMM database.
