@@ -4,7 +4,7 @@
 -- SELECT StFileServerNodeID FROM tbl_ST_StorageFileServerNode
 -- 
 DECLARE @DeleteHostId GUID;
-SET @DeleteHostId = 'BA2E3DF0-BAF8-4524-A77F-4E4991383C97'
+SET @DeleteHostId = 'YourStFileServerNodeId'
 
 PRINT N'Prepairing to delete host bus adapters'
  
