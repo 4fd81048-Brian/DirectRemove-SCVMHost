@@ -20,7 +20,9 @@ Expand Tables, select dbo.tbl_ADHC_Host and right-click and choose Select top 10
 Create a new Query and backup the database
 
 -- To backup the database (replace "VirtualManagerDB" with your VMM Database name and "C:\Support" with a folder name to store the backup). Then copy the backup somewhere else.
+
 BACKUP DATABASE VirtualManagerDB TO DISK = 'C:\Support\VirtualManagerDB.bak';
+
 GO
 
 Create a new query and copy/paste the script comments replacing "VirtualManagerDB" with your VMM Database name and replacing YourHostGUID with the HostGUID identified above.
