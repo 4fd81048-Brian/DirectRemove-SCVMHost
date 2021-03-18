@@ -232,6 +232,18 @@ PRINT N'Deleting host Processor Compatibility Vector Mapping'
 DELETE FROM [dbo].[tbl_ADHC_HostToProcessorCompatibilityVectorMapping]
 WHERE HostId = @DeleteHostId
  
+PRINT N'Deleting physical machine record'
+
+DECLARE @PhysicalMachineId  GUID;
+SET @PhysicalMachineId =
+(
+SELECT PhysicalMachineId FROM [dbo].[tbl_ADHC_Host]
+WHERE HostID = @DeleteHostID
+)
+
+DELETE FROM [dbo].[tbl_PMM_PhysicalMachine]
+WHERE PhysicalMachineId = @PhysicalMachineId
+
 PRINT N'Deleting host'
  
 DELETE FROM [dbo].[tbl_ADHC_Host]
