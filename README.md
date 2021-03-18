@@ -17,20 +17,23 @@ https://philipflint.com/2017/07/24/how-to-delete-a-host-that-is-in-pending-state
 
 To run this script
 
-1. Launch SQL Server Management Studio and select your VMM database.
-2. New Query with current connection
+1. Stop the VMM Service
+2. Launch SQL Server Management Studio and select your VMM database.
+3. New Query with current connection
 
 BACKUP DATABASE VirtualManagerDB TO DISK = 'C:\Support\VirtualManagerDB.bak';
 
-3. Execute the backup
-4. New Query with current connection
+4. Execute the backup
+5. New Query with current connection
 
 SELECT [HostID], [ComputerName]
 FROM [tbl_ADHC_Host]
 WHERE [ComputerName] = 'GBODC-S2D-N2.ad.ugdsb.on.ca'
 
-5. Note the HostID
-6. New Query with current connection
-7. Paste the Script DirectRemove-SCVMHost script
-8. Replace {YourHostID} with the HostID identified above.
-9. Execute and review the output for errors.
+6. Note the HostID
+7. New Query with current connection
+8. Paste the Script DirectRemove-SCVMHost script
+9. Replace {YourHostID} with the HostID identified above.
+10. Execute and review the output for errors.
+
+11. Restart the VMM Service
