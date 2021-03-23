@@ -66,7 +66,12 @@ PRINT N'Completing host network adapters deletion'
  
 DELETE FROM [dbo].[tbl_ADHC_HostNetworkAdapter]
 WHERE HostID = @DeleteHostId
- 
+
+PRINT N'Deleting virtual network adapters'
+
+DELETE FROM [dbo].[tbl_WLC_VNetworkAdapter]
+WHERE HostId = @DeleteHostId
+
 PRINT N'Deleting virtual networks'
  
 DELETE FROM [dbo].[tbl_ADHC_VirtualNetwork]
