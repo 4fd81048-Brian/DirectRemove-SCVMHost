@@ -28,7 +28,7 @@ BACKUP DATABASE VirtualManagerDB TO DISK = 'C:\Support\VirtualManagerDB.bak';
 
 SELECT [HostID], [ComputerName]
 FROM [tbl_ADHC_Host]
-WHERE [ComputerName] = 'GBODC-S2D-N2.ad.ugdsb.on.ca'
+WHERE [ComputerName] = '{host name}'
 
 6. Note the HostID
 7. New Query with current connection
